@@ -1,0 +1,133 @@
+#include <iostream>
+
+
+//зад 6:Напишете програма, която, по дадено число а и степенен показател n, намира а нa n - та степен.
+
+//Пример:
+
+//Вход: 2 10  : 1024  
+//Вход: 0 0  : unknown 
+//Вход: 0 1 : 0       
+//Вход: 2 0 : 1       
+//Вход: 2 -2 : 0,25   
+//Вход: -2 10 : 1024  
+//Вход: -2 5 : -32   
+
+/*
+
+int main()
+{
+    double  number;
+    int power;
+    std::cin >> number;
+    std::cin >> power;
+
+    if (number == 0 && power == 0) {
+        std::cout << "Unknown" << std::endl;
+
+    }
+    double PoweredNUmber = 1;
+ 
+    for (int i = 1; i <= power ; i++) {
+        PoweredNUmber *= number;
+
+    }
+
+    if (power < 0) {
+
+        for (int j = 0; j > power; j--) {
+            PoweredNUmber *= number;
+        }
+        PoweredNUmber = 1 / PoweredNUmber;
+    }
+        std::cout << PoweredNUmber << std::endl;
+   }
+
+*/
+//зад 7: По дадено естествено число определете дали то е просто.
+
+//Пример:
+
+//Вход: 8
+
+//Изход : NO
+
+//Вход : 7
+
+//Изход : YES
+/*
+int main() 
+{
+    unsigned number;
+    std::cin >> number;
+    bool isPrime = true;
+
+    if (number <= 1) {
+        isPrime = false;
+    }
+    else {
+        for (int i = 2; i * i <= number; i++) {
+            if (number % 2 == 0) {
+                isPrime = false;
+            }
+        }
+    }
+    std::cout << (isPrime ? "Prime" : "Not Prime");
+    
+}
+*/
+//Зад 8: Изкарайте всички главни букви от английската азбука, които са съгласни. 
+
+/*
+int main()
+{
+     
+    for (char i = 'B'; i <= 'Z'; i++) {
+
+        if (i == 'E' || i =='Y' || i=='I' || i == 'O' || i == 'U') {
+            continue;
+        }
+    
+
+        std::cout << i << std::endl;
+    }
+}
+*/
+
+    
+
+
+//зад 9:По дадено число N изкарайте на екрана квадрат от N x N символи, където по главния диагонал стоят нули, над него + , а под него - .
+
+//Пример:
+
+//Вход:
+
+//4 Изход :
+
+  //  0+++
+  //  -0++
+  //  --0+
+  //  ---0
+/*
+int main() 
+{
+    int n = 4;
+  
+
+    for (int i = 1; i <= n; i++) {
+        if (i >= 2) {
+            for (int c = 1; c < i ; c++) {
+                std::cout << "-";
+            }
+        }
+       
+        std::cout << 0;
+        for (int j = 1; j <= n-i; j++) {
+            std::cout << "+";
+
+            
+        }std::cout << std::endl;
+        
+    
+    }
